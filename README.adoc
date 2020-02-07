@@ -1,0 +1,49 @@
+= Dan's Cafe
+Anthony Ikeda <anthony.ikeda@gmail.com>
+1.0.0
+:toc: right
+:icons: font
+:listing-caption: Listing
+
+== Overview
+
+=== Welcome to Dan's Cafe!
+
+Dan's Cafe is just getting started in your local city and Dan has decided he wants to take a fresh perspectice on how he serves up his beans.
+
+This project will enable Dan to ensure his customers have the best experience and are able to alwalys enjoy their favourite snacks and beverages.
+
+A customer should be able to:
+
+* Order a beverage or snack from the menu
+* Register as a customer for extra benefits
+* Remotely order a beverage for pick up at the store.
+* Browse the menu and choose from a selection of beverages and snacks
+* Browse their account and see their award progress.
+
+Dan and his team need to be able to:
+
+* Use a standard POS system to bill his customers
+* Generate end of day and hourly reports of his sales
+* Generate end of day and hourly reports of customer rewards
+* View the inventory and order new stock when inventory gets low.
+* Apply customer rewards to purchases.
+
+This platform will be built around 2 main applications:
+
+* Customer Portal
+** We will create modules for:
+*** the menu
+*** Purchases/Shopping Cart
+*** Purchase Alerts
+*** User account
+*** Rewards
+* Admin Portal
+** We will create modules for:
+*** Inventory
+*** Reports
+
+An API Gateway will be used to route to the backend web services that support the platform.
+
+There will be some jobs that run hourly and at the end of the day to generate the reports and store them to online storage.
+
