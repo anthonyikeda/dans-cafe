@@ -1,8 +1,12 @@
-<mat-toolbar>
-  <mat-toolbar-row>Welcome to Dan's Cafe</mat-toolbar-row>
+<mat-toolbar color="primary">
   <mat-toolbar-row>
-  <a href="#">Menu</a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="#">My Account</a>
-</mat-toolbar-row>
+    <span>Welcome to Dan's Cafe</span>
+    <span class="fill-remaining-space"></span>
+    <span><button mat-button><mat-icon>account_circle</mat-icon></button></span>
+  </mat-toolbar-row>
+  <mat-toolbar-row color="warning">
+    <span><button mat-button (click)="navigateTo('drinks')">Drinks</button></span>
+    <span><button mat-button (click)="navigateTo('food')">Food</button></span>
+  </mat-toolbar-row>
 </mat-toolbar>
 <router-outlet></router-outlet>
