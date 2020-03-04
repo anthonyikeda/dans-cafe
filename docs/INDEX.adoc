@@ -47,8 +47,6 @@ An API Gateway will be used to route to the backend web services that support th
 
 There will be some jobs that run hourly and at the end of the day to generate the reports and store them to online storage.
 
-=== Architecture
-
 
 
 == Road to WebAssembly
