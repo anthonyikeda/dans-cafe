@@ -10,7 +10,7 @@ export class FoodComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("Food component!");
+    console.log('Food component!');
   }
 
 }
