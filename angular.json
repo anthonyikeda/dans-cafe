@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["js-sha256", "keycloak-js"],
             "outputPath": "dist/dans-cafe",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -63,6 +64,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "port" : 4400,
             "browserTarget": "dans-cafe:build"
           },
           "configurations": {
