@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" *appHasRole="'shopper'">
+  <mat-toolbar-row>
+    <span>Welcome to Dan's Cafe</span>
+    <span class="fill-remaining-space"></span>
+    <span><button mat-button (click)="logout()"><mat-icon>account_circle</mat-icon></button></span>
+  </mat-toolbar-row>
+  <mat-toolbar-row color="warning">
+    <span><button mat-button (click)="navigateTo('drinks')">Drinks</button></span>
+    <span><button mat-button (click)="navigateTo('food')">Food</button></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-toolbar color="primary" *appHasRole="'store-owner'">
+  <mat-toolbar-row>
+    <span>Store Inventory Administration</span>
+    <span class="fill-remaining-space"></span>
+    <span><button mat-button (click)="logout()"><mat-icon>account_circle</mat-icon></button></span>
+  </mat-toolbar-row>
+  <mat-toolbar-row color="warning">
+    <span><button mat-button>Product Stock</button></span>
+    <span><button mat-button>Sales</button></span>
+  </mat-toolbar-row>
+</mat-toolbar>

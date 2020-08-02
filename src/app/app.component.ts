@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +8,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AppComponent {
   title = 'dans-cafe';
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor() {}
 
-  navigateTo(location: string): void {
-    this.router.navigate([location], { relativeTo: this.route});
-  }
 }
