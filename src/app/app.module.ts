@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,8 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { FoodComponent } from './food/food.component';
 import { DrinksComponent } from './drinks/drinks.component';
 import { RewardsComponent } from './inventory/rewards/rewards.component';
+import { initializer } from './initializer';
+import { KeycloakService } from 'keycloak-angular';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,15 @@ import { RewardsComponent } from './inventory/rewards/rewards.component';
     MaterialModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    KeycloakService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializer,
+      deps: [KeycloakService],
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
